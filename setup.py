@@ -1,3 +1,4 @@
+"""Setup remedian."""
 from setuptools import setup
 
 setup(name='remedian',
@@ -8,4 +9,4 @@ setup(name='remedian',
       author_email='stefan.appelhoff@mailbox.org',
       license='MIT',
       packages=['remedian'],
-zip_safe=False)
+      zip_safe=False)
