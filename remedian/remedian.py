@@ -40,7 +40,10 @@ class Remedian():
         The number of observations to be stored within each array.
         If `n_obs` >= `t`, Remedian will equal the median. Higher values of
         `n_obs` will lead to a better approximation of the median but will
-        require more memory.
+        require more memory. It might be best to set this parameter by
+        calculating the maximum n_obs possible through the size of the input
+        data as the fraction of data.nbytes and
+        psutil.virtual_memory().available
 
     t : int
         The total number of observations from which a median should be
