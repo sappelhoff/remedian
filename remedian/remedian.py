@@ -177,7 +177,7 @@ class Remedian():
         for arr_i, mod in enumerate(self.modulos):
             if self.obs_count % mod == 0:
                 data = self.arrs[arr_i]
-                m_tmp = np.median(data, axis=-1)
+                m_tmp = np.median(data, axis=-1, overwrite_input=True)
                 self.arrs[arr_i+1][..., self.obs_idx_counter[arr_i+1]] = m_tmp
                 self.obs_idx_counter[arr_i+1] += 1
                 self.obs_idx_counter[arr_i] = 0
@@ -186,4 +186,5 @@ class Remedian():
         # calculate the median of the last array.
         # This is the robust approximation of the median
         if self.obs_count == self.t:
-            self.remedian = np.median(self.arrs[-1], axis=-1)
+            self.remedian = np.median(self.arrs[-1], axis=-1,
+                                      overwrite_input=True)
