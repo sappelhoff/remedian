@@ -91,11 +91,15 @@ class Remedian():
             number of total observations
 
         """
+        # n_obs of <= 1 does not make sense
+        try:
+            assert n_obs > 1
+        except AssertionError:
+            raise ValueError('`n_obs` of <= 1 does not make sense.')
+
         self.obs_size = list(obs_size)
         self.n_obs = n_obs
         self.t = t
-
-        assert n_obs > 1
 
         # Calculate the number of arrays needed and their sizes
         self.k_arrs = self._calc_k_arrs()

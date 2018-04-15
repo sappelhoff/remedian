@@ -21,14 +21,18 @@ def test_wrong_input():
     except TypeError:
         pass
 
+    # Normal call of Remedian without error
     assert Remedian((1,), 2, 3)
 
-    # Negative observations or arrays impossible
-    try:
-        Remedian((1,), -2, 3)
-    except ValueError:
-        pass
+    # Observations <= 1 are impossible
+    for n_obs in range(-1, 2):
+        try:
+            print(n_obs)
+            Remedian((1,), n_obs, 3)
+        except ValueError:
+            pass
 
+    # Negative number of input arrays are impossible
     try:
         Remedian((1,), 2, -3)
     except ValueError:
