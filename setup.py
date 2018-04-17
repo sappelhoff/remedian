@@ -23,9 +23,9 @@ setup(name='remedian',
       ],
       keywords='remedian median memory efficient big data',
       packages=find_packages(),
-      install_requires=['numpy'],
+      install_requires=['numpy>=1.14.1'],
       extras_require={
-        'test': ['nose']
+        'test': ['nose>=1.3.7']
       },
       project_urls={
         'Bug Reports': 'https://github.com/sappelhoff/remedian/issues',
