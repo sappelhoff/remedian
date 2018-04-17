@@ -24,6 +24,7 @@ setup(name='remedian',
       keywords='remedian median memory efficient big data',
       packages=find_packages(),
       install_requires=['numpy>=1.14.1'],
+      python_requires='>=2.7, >=3.6',
       extras_require={
         'test': ['nose>=1.3.7']
       },
