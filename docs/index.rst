@@ -6,9 +6,15 @@
 Welcome to remedian's documentation!
 ====================================
 
+The Remedian: A Robust Averaging Method for Large Data Sets - Python implementation
+
+This algorithm is used to approximate the median of several data chunks if these data chunks cannot (or should not) be loaded into memory at once.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+   tutorial
 
 
 
