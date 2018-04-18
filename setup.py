@@ -16,6 +16,7 @@ setup(name='remedian',
       url='http://github.com/sappelhoff/remedian',
       author='Stefan Appelhoff',
       author_email='stefan.appelhoff@mailbox.org',
+      license='MIT',
       classifiers=[
         'Topic :: Scientific/Engineering :: Mathematics',
         'Programming Language :: Python',
