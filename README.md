@@ -35,6 +35,10 @@ References
    the remedian algorithm", Theoretical Computer Science,
    vol. 495 (2013), pp. 1-16
 
+# Installation
+
+`pip install remedian`
+
 # Installation of most recent version
 
 1. activate your python environment
