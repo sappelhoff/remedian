@@ -6,9 +6,19 @@
 Welcome to remedian's documentation!
 ====================================
 
+THIS is some text that I am writingTHIS is some text that I am writing
+THIS is some text that I am writing
+THIS is some text that I am writing
+THIS is some text that I am writing
+THIS is some text that I am writing
+THIS is some text that I am writing
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+   modules
+   remedian
 
 
 
