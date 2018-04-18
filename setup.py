@@ -10,7 +10,7 @@ with io.open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(name='remedian',
-      version='0.1.0',
+      version='0.1.1',
       description='Remedian: robust averaging of large data sets',
       long_description=long_description,
       long_description_content_type='text/markdown',
