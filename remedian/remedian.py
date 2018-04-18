@@ -10,7 +10,7 @@ import numpy as np
 class Remedian():
     """Remedian object for a robust averaging method for large data sets.
 
-    Implementation of the Remedian algorithm, see [1], [2], [3] for references.
+    Implementation of the Remedian algorithm, see [1] [2] [3] for references.
 
     This algorithm is used to approximate the median of several data chunks if
     these data chunks cannot (or should not) be loaded into memory at once.
@@ -62,7 +62,7 @@ class Remedian():
        of the American Statistical Association, vol. 85 (1990),
        pp. 97-104
 
-    .. [2]M. Chao, G. Lin, "The asymptotic distributions of
+    .. [2] M. Chao, G. Lin, "The asymptotic distributions of
       the remedians", Journal of Statistical Planning and
       Inference, vol. 37 (1993), pp. 1-11
 
