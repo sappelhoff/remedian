@@ -15,6 +15,7 @@ This algorithm is used to approximate the median of several data chunks if these
    :caption: Contents:
 
    tutorial
+   modules
 
 
 
