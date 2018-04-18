@@ -10,7 +10,7 @@ import numpy as np
 class Remedian():
     """Remedian object for a robust averaging method for large data sets.
 
-    Implementation of the Remedian algorith, see [1], [2], [3] for references.
+    Implementation of the Remedian algorithm, see [1], [2], [3] for references.
 
     This algorithm is used to approximate the median of several data chunks if
     these data chunks cannot (or should not) be loaded into memory at once.
@@ -38,12 +38,7 @@ class Remedian():
 
     n_obs : int
         The number of observations to be stored within each array.
-        If `n_obs` >= `t`, Remedian will equal the median. Higher values of
-        `n_obs` will lead to a better approximation of the median but will
-        require more memory. It might be best to set this parameter by
-        calculating the maximum n_obs possible through the size of the input
-        data as the fraction of data.nbytes and
-        psutil.virtual_memory().available
+        If `n_obs` >= `t`, Remedian will equal the median.
 
     t : int
         The total number of observations from which a median should be
@@ -75,6 +70,33 @@ class Remedian():
        the remedian algorithm", Theoretical Computer Science,
        vol. 495 (2013), pp. 1-16
 
+    Examples
+    --------
+    >>> import numpy as np
+    >>> from remedian.remedian import Remedian
+
+    >>> # We can have data of any shape ... e.g., 3D:
+    >>> data_shape = (2,3,4)
+
+    >>> # Now we have to decide how many data observations we want to load into
+    >>> # memory at a time before computing a first intermediate median from it
+    >>> n_obs = 100
+
+    >>> # Pick some example number, assume we have `t` arrays of `data_shape`
+    >>> # that we want to summarize with Remedian
+    >>> t = 500
+
+    >>> # Initialize the object
+    >>> r = Remedian(data_shape, n_obs, t)
+
+    >>> # Feed it the data- For now, we just generate the data randomly.
+    >>> for obs_i in range(t):
+    >>>     obs = np.random.random(data_shape)
+    >>>     r.add_obs(obs)
+
+    >>> # This is the remedian
+    >>> r.remedian
+
     """
 
     def __init__(self, obs_size, n_obs, t):
@@ -85,7 +107,7 @@ class Remedian():
         Parameters
         ----------
         obs_size : ndarray
-            size of the observations
+            size of the observations. Could be (1,) for scalars.
 
         n_obs : int
             observations per array
