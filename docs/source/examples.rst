@@ -4,7 +4,7 @@ A straight forward example:
 
 .. code-block:: python
 
- import matplotlib.pyplot as plt
+    import matplotlib.pyplot as plt
     import numpy as np
     from remedian.remedian import Remedian
 
