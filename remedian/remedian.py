@@ -10,7 +10,8 @@ import numpy as np
 class Remedian():
     """Remedian object for a robust averaging method for large data sets.
 
-    Implementation of the Remedian algorithm, see [1] [2] [3] for references.
+    Implementation of the Remedian algorithm, see [1]_ [2]_ [3]_ for
+    references.
 
     This algorithm is used to approximate the median of several data chunks if
     these data chunks cannot (or should not) be loaded into memory at once.
@@ -74,28 +75,23 @@ class Remedian():
     --------
     >>> import numpy as np
     >>> from remedian.remedian import Remedian
-
     >>> # We can have data of any shape ... e.g., 3D:
-    >>> data_shape = (2,3,4)
-
+    >>> data_shape = (2, 3, 4)
     >>> # Now we have to decide how many data observations we want to load into
     >>> # memory at a time before computing a first intermediate median from it
     >>> n_obs = 100
-
     >>> # Pick some example number, assume we have `t` arrays of `data_shape`
     >>> # that we want to summarize with Remedian
     >>> t = 500
-
     >>> # Initialize the object
     >>> r = Remedian(data_shape, n_obs, t)
-
     >>> # Feed it the data- For now, we just generate the data randomly.
     >>> for obs_i in range(t):
     >>>     obs = np.random.random(data_shape)
     >>>     r.add_obs(obs)
-
     >>> # This is the remedian
     >>> r.remedian
+    assert r.remedian.ndim == data_shape.ndim
 
     """
 
@@ -116,10 +112,7 @@ class Remedian():
             number of total observations
 
         """
-        # n_obs of <= 1 does not make sense
-        try:
-            assert n_obs > 1
-        except AssertionError:
+        if n_obs <= 1:
             raise ValueError('`n_obs` of <= 1 does not make sense.')
 
         self.obs_size = list(obs_size)
@@ -171,19 +164,14 @@ class Remedian():
         # We only work if:
         # ... we get an observation of correct size
         # ... we have not yet received all observations already
-        try:
-            assert list(obs.shape) == self.obs_size
-        except AssertionError:
-            print('Expected observation of size {}'.format(self.obs_size))
-            print('... but received: {}'.format(list(obs.shape)))
-            return None
-        try:
-            assert self.obs_count <= self.t-1
-        except AssertionError:
-            print('\nAlready collected '
-                  '{} observations out of t={}'.format(self.obs_count, self.t))
-            print('The remedian is {}'.format(self.remedian))
-            return None
+        if list(obs.shape) != self.obs_size:
+            raise ValueError('Expected observation of size {} but received: '
+                             '{}'.format(self.obs_size, list(obs.shape)))
+        if self.obs_count > (self.t - 1):
+            raise RuntimeError('Already collected {} observations out of t={} '
+                               'The remedian is {}'.format(self.obs_count,
+                                                           self.t,
+                                                           self.remedian))
 
         # We accept a new observation
         self.obs_count += 1

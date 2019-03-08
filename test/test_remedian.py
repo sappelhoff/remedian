@@ -1,7 +1,5 @@
 """Tests for the Remedian class."""
-
-from nose.tools import assert_raises
-
+import pytest
 import numpy as np
 
 from remedian.remedian import Remedian
@@ -77,7 +75,8 @@ def test_too_many_obs():
         r.add_obs(obs)
 
     # One more should be one too much
-    assert_raises(AssertionError, r.add_obs(np.random.random(obs_size)))
+    with pytest.raises(RuntimeError):
+        r.add_obs(np.random.random(obs_size))
 
 
 def test_wrong_obs_size():
@@ -90,7 +89,8 @@ def test_wrong_obs_size():
 
     # We give a wrong obs_size
     wrong_obs_size = tuple(np.asarray(obs_size)+1)
-    assert_raises(AssertionError, r.add_obs(np.random.random(wrong_obs_size)))
+    with pytest.raises(ValueError):
+        r.add_obs(np.random.random(wrong_obs_size))
 
 
 def test_true_median():
