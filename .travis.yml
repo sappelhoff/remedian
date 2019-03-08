@@ -8,11 +8,9 @@ python:
 
 install:
   - pip install -e .
-  - pip install codecov
-  - pip install pytest-cov
 
 script:
-  - pytest test/ -v --cov=./
+  - pytest --verbose --cov=remedian
 
 after_success:
-- codecov --token=06e24771-1394-46f3-8434-67c539e56027
+- bash <(curl -s https://codecov.io/bash)
