@@ -29,7 +29,7 @@ setup(name='remedian',
       install_requires=['numpy>=1.14.1'],
       python_requires='>=2.7',
       extras_require={
-        'test': ['pytest', 'pytest-cov']
+        'test': ['pytest>=3.6', 'pytest-cov']
       },
       project_urls={
         'Bug Reports': 'https://github.com/sappelhoff/remedian/issues',
