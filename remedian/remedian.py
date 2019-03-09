@@ -71,28 +71,6 @@ class Remedian():
        the remedian algorithm", Theoretical Computer Science,
        vol. 495 (2013), pp. 1-16
 
-    Examples
-    --------
-    >>> import numpy as np
-    >>> from remedian.remedian import Remedian
-    >>> # We can have data of any shape ... e.g., 3D:
-    >>> data_shape = (2, 3, 4)
-    >>> # Now we have to decide how many data observations we want to load into
-    >>> # memory at a time before computing a first intermediate median from it
-    >>> n_obs = 100
-    >>> # Pick some example number, assume we have `t` arrays of `data_shape`
-    >>> # that we want to summarize with Remedian
-    >>> t = 500
-    >>> # Initialize the object
-    >>> r = Remedian(data_shape, n_obs, t)
-    >>> # Feed it the data- For now, we just generate the data randomly.
-    >>> for obs_i in range(t):
-    >>>     obs = np.random.random(data_shape)
-    >>>     r.add_obs(obs)
-    >>> # This is the remedian
-    >>> r.remedian
-    assert r.remedian.ndim == data_shape.ndim
-
     """
 
     def __init__(self, obs_size, n_obs, t):
