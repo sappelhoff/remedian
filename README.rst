@@ -50,8 +50,8 @@ chunks have been fed into the object.
 Installation
 ============
 
-The only dependency of ``remedian`` is currently ``numpy``. You can install
-``remedian`` with ``pip`` ``pip install remedian`` .
+``remedian`` runs on Python 3 with ``numpy`` as its only dependency.
+You can install ``remedian`` with ``pip`` ``pip install remedian``.
 
 Installation of development version
 ===================================

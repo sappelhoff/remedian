@@ -39,7 +39,7 @@ extensions = [
 
 master_doc = "index"
 autosummary_generate = True
-numpydoc_show_class_members = False  # https://stackoverflow.com/a/34604043/5201771
+numpydoc_show_class_members = False  # noqa: E501 https://stackoverflow.com/a/34604043/5201771
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

@@ -38,7 +38,7 @@ setup(name='remedian',
       keywords='remedian median memory efficient big data',
       packages=find_packages(),
       install_requires=['numpy>=1.14.1'],
-      python_requires='>=2.7',
+      python_requires='>=3',
       project_urls={
         "Documentation": "https://remedian.readthedocs.io/en/latest",
         'Bug Reports': 'https://github.com/sappelhoff/remedian/issues',

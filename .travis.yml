@@ -3,7 +3,6 @@ sudo: false
 language: python
 
 python:
-  - "2.7"
   - "3.6"
 
 install:
@@ -13,6 +12,8 @@ install:
 
 script:
   - pytest --verbose --cov=remedian
+  - flake8 .
+  - cd docs/ && make clean && make html
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)

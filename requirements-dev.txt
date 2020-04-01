@@ -1,6 +1,7 @@
 matplotlib
 pytest
 pytest-cov
+flake8
 sphinx
 sphinx_bootstrap_theme
 numpydoc
