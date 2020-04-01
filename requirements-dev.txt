@@ -3,5 +3,6 @@ pytest
 pytest-cov
 flake8
 sphinx
+sphinx_gallery
 sphinx_bootstrap_theme
 numpydoc
