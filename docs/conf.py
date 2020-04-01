@@ -69,6 +69,7 @@ html_theme_options = {
     "navbar_links": [
         ("Examples", "auto_examples/index"),
         ("API", "api"),
+        ("Changelog", "changelog"),
         ("GitHub", "https://github.com/sappelhoff/remedian", True),
     ],
 }
