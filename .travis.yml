@@ -13,6 +13,7 @@ install:
 script:
   - pytest --verbose --cov=remedian
   - flake8 .
+  - pydocstyle remedian
   - cd docs/ && make clean && make html
 
 after_success:
