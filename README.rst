@@ -67,7 +67,7 @@ Installation of development version
 Usage
 =====
 
-See the `example <https://remedian.readthedocs.io/en/latest/examples.html>`_.
+See the `example <https://remedian.readthedocs.io/en/latest/auto_examples/use_remedian.html#sphx-glr-auto-examples-use-remedian-py>`_.
 
 References
 ==========
