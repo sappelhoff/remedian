@@ -1,3 +1,5 @@
+:orphan:
+
 Examples
 ========
 A straight forward example:
@@ -6,7 +8,7 @@ A straight forward example:
 
     import matplotlib.pyplot as plt
     import numpy as np
-    from remedian.remedian import Remedian
+    from remedian import Remedian
 
     # We can have data of any shape ... e.g., 3D:
     data_shape = (2,3,4)

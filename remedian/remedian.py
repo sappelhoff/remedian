@@ -36,11 +36,9 @@ class Remedian():
     obs_size : ndarray
         The shape of each data chunk (=observation) to be fed into the Remedian
         object.
-
     n_obs : int
         The number of observations to be stored within each array.
         If `n_obs` >= `t`, Remedian will equal the median.
-
     t : int
         The total number of observations from which a median should be
         approximated.
@@ -50,7 +48,6 @@ class Remedian():
     obs_count : int
         Counter of number of observations that have already been given
         to the Remedian object.
-
     remedian : None | ndarray, shape(obs_size)
         The calculated remedian of the same shape as the input data.
         Will be None until all observations `n_obs` have been fed into
@@ -82,10 +79,8 @@ class Remedian():
         ----------
         obs_size : ndarray
             size of the observations. Could be (1,) for scalars.
-
         n_obs : int
             observations per array
-
         t : int
             number of total observations
 

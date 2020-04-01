@@ -8,33 +8,23 @@ from remedian.remedian import Remedian
 def test_wrong_input():
     """Test behavior if wrong input is given at initialization."""
     # No input
-    try:
+    with pytest.raises(TypeError):
         Remedian()
-    except TypeError:
-        pass
 
     # obs_size is not a shape (tuple)
-    try:
+    with pytest.raises(TypeError):
         Remedian(1, 2, 3)
-    except TypeError:
-        pass
 
     # Normal call of Remedian without error
     assert Remedian((1,), 2, 3)
 
     # Observations <= 1 are impossible
-    for n_obs in range(-1, 2):
-        try:
-            print(n_obs)
-            Remedian((1,), n_obs, 3)
-        except ValueError:
-            pass
+    with pytest.raises(ValueError):
+        Remedian((1,), 0, 3)
 
     # Negative number of input arrays are impossible
-    try:
+    with pytest.raises(ValueError):
         Remedian((1,), 2, -3)
-    except ValueError:
-        pass
 
 
 def test_initial_values():
