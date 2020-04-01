@@ -55,20 +55,22 @@ xydiff = x-y
 
 
 ###############################################################################
-# Now let's make a plot!
+# Now let's make a plot! We force the 3D data to 2D using
+# :func:`numpy.reshape`.
 
 # For colorbar scaling
-vmin = np.min([x.min(), y.min(), xydiff.min()])
-vmax = np.max([x.max(), y.max(), xydiff.max()])
-vmin = -1*np.max(np.abs([vmin, vmax]))
-vmax = np.max(np.abs([vmin, vmax]))
+vmax = np.max([np.abs(x), np.abs(y), np.abs(xydiff)])
+vmin = -vmax
 
 
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
 
 for data_to_plot, ax, name in zip([x, y, xydiff], [ax1, ax2, ax3],
                                   ['True median', 'Remedian', 'Difference']):
-    ax.imshow(data_to_plot.reshape(1, -1), aspect='auto', cmap='bwr',
-              vmin=vmin, vmax=vmax)
-    ax.axis('off')
+    im = ax.imshow(data_to_plot.reshape(1, -1), aspect='auto', cmap='bwr',
+                   vmin=vmin, vmax=vmax)
+    ax.set_xticks([])
+    ax.set_yticks([])
     ax.set_title(name)
+
+cbar = plt.colorbar(im, ax=ax)
