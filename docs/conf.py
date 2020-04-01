@@ -68,6 +68,7 @@ html_theme_options = {
     "bootstrap_version": "3",
     "navbar_links": [
         ("Examples", "auto_examples/index"),
+        ("API", "api"),
         ("GitHub", "https://github.com/sappelhoff/remedian", True),
     ],
 }
