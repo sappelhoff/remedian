@@ -67,7 +67,14 @@ Installation of development version
 Usage
 =====
 
-See the `example <https://remedian.readthedocs.io/en/latest/auto_examples/use_remedian.html#sphx-glr-auto-examples-use-remedian-py>`_.
+See the `examples <https://remedian.readthedocs.io/en/latest/auto_examples/index.html>`_.
+
+CONTRIBUTIONS WELCOME
+=====================
+
+This is a very basic package currently and there are many enhancements that
+could be made. If you want to work on this, please write a GitHub issue or
+submit a Pull Request.
 
 References
 ==========
