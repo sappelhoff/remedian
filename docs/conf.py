@@ -90,6 +90,10 @@ intersphinx_mapping = {
 intersphinx_timeout = 5
 
 sphinx_gallery_conf = {
+    "doc_module": ("remedian"),
+    "reference_url": {
+        "remedian": None,
+    },
     'examples_dirs': '../examples',
     'gallery_dirs': 'auto_examples',
     'filename_pattern': '^((?!sgskip).)*$',
