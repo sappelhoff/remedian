@@ -3,7 +3,6 @@ import os
 import sys
 from datetime import date
 
-import sphinx_gallery  # noqa: F401
 import sphinx_bootstrap_theme
 
 import remedian
@@ -33,14 +32,19 @@ release = version
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
-    'sphinx.ext.viewcode',
+    "sphinx.ext.viewcode",
+    "sphinx.ext.intersphinx",
     'numpydoc',
     'sphinx_gallery.gen_gallery',
 ]
 
 master_doc = "index"
 autosummary_generate = True
+
+# configure numpydoc
+numpydoc_xref_param_type = True
 numpydoc_show_class_members = False  # noqa: E501 https://stackoverflow.com/a/34604043/5201771
 
 # List of patterns, relative to source directory, that match files and
@@ -55,6 +59,8 @@ html_show_sourcelink = False
 
 html_theme = "bootstrap"
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+
+templates_path = ["_templates"]
 
 
 # Theme options are theme-specific and customize the look and feel of a theme

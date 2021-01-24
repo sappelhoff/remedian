@@ -8,12 +8,16 @@ API Documentation
 
 Here we list the Application Programming Interface (API) for remedian.
 
-.. currentmodule:: remedian
-
 The :class:`Remedian` class
 ----------------------------
+
+.. automodule:: remedian
+   :no-members:
+   :no-inherited-members:
+
+.. currentmodule:: remedian
+
 .. autosummary::
    :toctree: generated/
 
    Remedian
-   Remedian.add_obs

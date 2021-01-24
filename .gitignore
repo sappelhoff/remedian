@@ -1,6 +1,7 @@
 .pytest_cache/
 docs/generated
 docs/auto_examples
+.vscode/
 
 
 # Byte-compiled / optimized / DLL files

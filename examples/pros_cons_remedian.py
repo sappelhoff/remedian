@@ -3,6 +3,8 @@
 Pros and Cons of Remedian
 =========================
 
+.. currentmodule:: remedian
+
 In this example we test :class:`remedian.Remedian` against :func:`numpy.median`
 in terms of three parameters:
 
@@ -10,7 +12,7 @@ in terms of three parameters:
 - mean squared error compared to true median
 - memory needed for computation
 
-"""
+"""  # noqa: D205 D400
 
 # Authors: Stefan Appelhoff <stefan.appelhoff@mailbox.org>
 # License: MIT
@@ -92,7 +94,7 @@ results = [memory_needed, compute_times, mses]
 for ax, name, result in zip(axs, names, results):
 
     ax.plot(n_obses, result[0, ...], label='data_unif')
-    ax.plot(n_obses, result[1, ...], label='data_norm')
+    ax.plot(n_obses, result[1, ...], label='data_norm', linestyle='--')
     ax.axvline(n_obses[-1], color='black', linestyle='--',
                label='*true* median')
 

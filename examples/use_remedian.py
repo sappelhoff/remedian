@@ -3,10 +3,12 @@
 Use Remedian
 ============
 
+.. currentmodule:: remedian
+
 This example exists to demonstrate the basic usage of
 :class:`remedian.Remedian`.
 
-"""
+"""  # noqa: D205 D400
 
 # Authors: Stefan Appelhoff <stefan.appelhoff@mailbox.org>
 # License: MIT
