@@ -1,9 +1,8 @@
 
 
-.. image:: https://travis-ci.org/sappelhoff/remedian.svg?branch=master
-   :target: https://travis-ci.org/sappelhoff/remedian
-   :alt: Build Status
-
+.. image:: https://github.com/sappelhoff/remedian/workflows/Python%20tests/badge.svg
+   :target: https://github.com/sappelhoff/remedian/actions?query=workflow%3A%22Python+tests%22
+   :alt: Python tests
 
 .. image:: https://codecov.io/gh/sappelhoff/remedian/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/sappelhoff/remedian
@@ -60,7 +59,6 @@ Installation of development version
 #. ``git clone https://www.github.com/sappelhoff/remedian``
 #. ``cd remedian``
 #. ``pip install -r requirements-dev.txt``
-#. ``pip install -r requirements.txt``
 #. ``pip install -e .``
 #. then you should be able to ``from remedian import Remedian``
 
