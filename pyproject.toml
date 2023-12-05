@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=45",  "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "remedian"
+description = "Remedian: robust averaging of large data sets"
+dynamic = ["version"]
+authors = [
+    { name = "Stefan Appelhoff", email = "stefan.appelhoff@mailbox.org" },
+]
+maintainers = [
+    { name = "Stefan Appelhoff", email = "stefan.appelhoff@mailbox.org" },
+]
+license = { text = "MIT" }
+readme = { file = "README.rst", content-type = "text/x-rst" }
+requires-python = ">=3.8"
+keywords = [
+    "remedian",
+    "median",
+    "memory",
+    "efficient",
+    "big",
+    "data",
+]
+classifiers = [
+  "Topic :: Scientific/Engineering",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Unix",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: MacOS",
+]
+
+dependencies = [
+    "numpy>=1.14.1",
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/sappelhoff/remedian/issues/"
+"Source Code" = "https://github.com/sappelhoff/remedian"
+"Documentation" = "https://remedian.readthedocs.io/en/latest"
+
+[project.optional-dependencies]
+
+dev = [
+    "matplotlib",
+    "pytest",
+    "pytest-cov",
+    "pytest-sugar",
+    "ruff",
+    "sphinx",
+    "sphinx_gallery",
+    "pillow",
+    "sphinx_bootstrap_theme",
+    "numpydoc",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["remedian"]
+exclude = ["tests"]
+namespaces = false
+
+[tool.setuptools.dynamic]
+version = {attr = "remedian.__version__"}
+
+[tool.ruff]
+select = ["E", "F", "W", "D", "UP", "I", "C90"]
+
+[tool.ruff.pydocstyle]
+convention = "numpy"
+
+[tool.coverage.run]
+omit = [
+  "*tests*",
+  ]
+
+[tool.coverage.report]
+# Regexes for lines to exclude from consideration
+exclude_lines = [
+  "pragma: no cover",
+  "if 0:",
+  "if __name__ == .__main__.:",
+  ]

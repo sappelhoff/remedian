@@ -17,6 +17,7 @@ This example exists to demonstrate the basic usage of
 # First we import what we need for this example.
 import matplotlib.pyplot as plt
 import numpy as np
+
 from remedian import Remedian
 
 ###############################################################################

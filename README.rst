@@ -50,7 +50,7 @@ Installation
 ============
 
 ``remedian`` runs on Python 3 with ``numpy`` as its only dependency.
-You can install ``remedian`` with ``pip`` ``pip install remedian``.
+You can install ``remedian`` with ``pip install remedian``.
 
 Installation of development version
 ===================================
@@ -58,8 +58,7 @@ Installation of development version
 #. activate your python environment
 #. ``git clone https://www.github.com/sappelhoff/remedian``
 #. ``cd remedian``
-#. ``pip install -r requirements-dev.txt``
-#. ``pip install -e .``
+#. ``pip install -e .[dev]``
 #. then you should be able to ``from remedian import Remedian``
 
 Usage

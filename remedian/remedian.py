@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Contains an implementation of Remedian."""
 
 # Author: Stefan Appelhoff <stefan.appelhoff@mailbox.org>
@@ -7,7 +6,7 @@
 import numpy as np
 
 
-class Remedian():
+class Remedian:
     """Remedian object for a robust averaging method for large data sets.
 
     Implementation of the Remedian algorithm, see [1]_ [2]_ [3]_ for

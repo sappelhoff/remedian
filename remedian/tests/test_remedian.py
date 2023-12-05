@@ -1,6 +1,6 @@
 """Tests for the Remedian class."""
-import pytest
 import numpy as np
+import pytest
 
 from remedian.remedian import Remedian
 
@@ -30,7 +30,7 @@ def test_wrong_input():
 def test_initial_values():
     """Test the initial values."""
     random_shape = np.random.randint(1, 100, np.random.randint(1, 5, 1)[0])
-    obs_size = np.random.random((random_shape)).shape
+    obs_size = np.random.random(random_shape).shape
     n_obs = np.random.randint(2, 100, 1)[0]
     t = np.random.randint(1, 100, 1)[0]
     r = Remedian(obs_size, n_obs, t)
@@ -42,7 +42,7 @@ def test_initial_values():
 def test_calc_remedian():
     """Test whether the calculation of a remedian works."""
     random_shape = np.random.randint(1, 3, np.random.randint(1, 3, 1)[0])
-    obs_size = np.random.random((random_shape)).shape
+    obs_size = np.random.random(random_shape).shape
     n_obs = np.random.randint(1, 50, 1)[0]
     t = np.random.randint(1, 50, 1)[0]
     r = Remedian(obs_size, n_obs, t)
@@ -72,7 +72,7 @@ def test_too_many_obs():
 def test_wrong_obs_size():
     """Test behavior if obs_size is unexpected at call to add_obs."""
     random_shape = np.random.randint(1, 3, np.random.randint(1, 3, 1)[0])
-    obs_size = np.random.random((random_shape)).shape
+    obs_size = np.random.random(random_shape).shape
     n_obs = np.random.randint(1, 50, 1)[0]
     t = np.random.randint(1, 50, 1)[0]
     r = Remedian(obs_size, n_obs, t)

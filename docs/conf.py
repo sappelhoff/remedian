@@ -16,7 +16,7 @@ sys.path.append(os.path.abspath(os.path.join(curdir, "..", "remedian")))
 # -- Project information -----------------------------------------------------
 
 project = 'remedian'
-copyright = "2018-{}, Stefan Appelhoff".format(date.today().year)
+copyright = f"2018-{date.today().year}, Stefan Appelhoff"
 author = 'Stefan Appelhoff'
 
 # The short X.Y version
