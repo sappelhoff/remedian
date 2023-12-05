@@ -21,10 +21,10 @@ jobs:
       TZ: Europe/Berlin
       FORCE_COLOR: true
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -40,7 +40,7 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest remedian/ --cov=remedian/ --cov-report=xml --cov-config=setup.cfg --verbose -s
+        pytest remedian/ --cov=remedian/ --cov-report=xml --cov-config=pyproject.toml --verbose -s
 
     - name: Build docs
       run: |
@@ -49,6 +49,6 @@ jobs:
 
     - name: Upload coverage report
       if: matrix.platform == 'ubuntu-latest'
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v3
       with:
         files: ./coverage.xml
