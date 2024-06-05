@@ -1,19 +1,3 @@
-
-
-.. image:: https://github.com/sappelhoff/remedian/workflows/Python%20tests/badge.svg
-   :target: https://github.com/sappelhoff/remedian/actions?query=workflow%3A%22Python+tests%22
-   :alt: Python tests
-
-.. image:: https://codecov.io/gh/sappelhoff/remedian/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/sappelhoff/remedian
-   :alt: codecov
-
-
-.. image:: https://readthedocs.org/projects/remedian/badge/?version=latest
-   :target: http://remedian.readthedocs.io/en/latest/?badge=latest
-   :alt: Documentation Status
-
-
 .. image:: https://badge.fury.io/py/remedian.svg
    :target: https://badge.fury.io/py/remedian
    :alt: PyPI version
@@ -21,8 +5,6 @@
 
 remedian
 ========
-
-See `the documentation <http://remedian.readthedocs.io/en/latest/>`_!
 
 .. docs_readme_include_label
 
@@ -64,7 +46,7 @@ Installation of development version
 Usage
 =====
 
-See the `examples <https://remedian.readthedocs.io/en/latest/auto_examples/index.html>`_.
+See the ``examples`` folder.
 
 CONTRIBUTIONS WELCOME
 =====================
